@@ -1,0 +1,7 @@
+.cover {
+  background: linear-gradient(
+    to right top,
+    rgba(13, 37, 63, 1),
+    rgba(1, 180, 228, 0.25)
+  );
+}

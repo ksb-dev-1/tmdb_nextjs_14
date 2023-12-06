@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tomato {
+  background: tomato;
+}
+
+.gold {
+  background: gold;
+}
+
+.green {
+  background: #1fac66;
+}
+
+.vote {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 0.2rem;
+  bottom: -25px;
+  left: 1rem;
+  border: 4px solid #fff;
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.vote_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: rgb(240, 240, 240);
+  }
+  25% {
+    background-color: rgb(235, 235, 235);
+  }
+  50% {
+    background-color: rgb(230, 230, 230);
+  }
+  75% {
+    background-color: rgb(225, 225, 225);
+  }
+  100% {
+    background-color: rgb(220, 220, 220);
+  }
+}
