@@ -51,7 +51,7 @@ export default function Trending() {
           <span className="w-[100px] text-center font-[500]">Today</span>
           <span className="w-[100px] text-center font-[500]">Weekly</span>
           <span
-            className="absolute bg-gradient-to-r from-[var(--c1)] to-[var(--c2)] font-[500] rounded-[50px] w-[100px] text-center translate-x-[0px] transition"
+            className="absolute bg-white text-[var(--c3)] font-[500] rounded-[50px] w-[100px] text-center translate-x-[0px] transition"
             ref={switchRef}
           >
             {today ? "Today" : "Weekly"}
