@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 // lib
-import { getTrending } from "@/lib/getTrending";
+import { getTrending } from "@/app/lib/getTrending";
 
 // styles
 import style from "./style.module.css";
@@ -17,6 +17,7 @@ export default async function Carousel() {
   ];
 
   const media_title = name ? name : title;
+  //await new Promise((resolve) => setTimeout(resolve, 10000));
 
   return (
     <div className="relative h-[350px]">
@@ -26,22 +27,29 @@ export default async function Carousel() {
           blurDataURL={backdrop_path === null ? url : IMG_PATH + backdrop_path}
           placeholder="blur"
           alt={media_title}
-          fill={true}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-contain"
+          height={350}
+          width={1280}
+          //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          className="h-[350px] w-[100%] object-cover"
         />
       </div>
+
       <div
         className={`${style.cover} absolute top-0 left-0 h-[350px] w-[100%] p-8`}
       ></div>
-      <div className="absolute left-[2rem] bottom-[2rem] text-white">
-        <p className="font-bold text-2xl mb-[0.25rem]">{media_title}</p>
+
+      <div className="absolute left-[2rem] top-[6rem] text-white">
+        {/* <p className="font-bold text-2xl mb-[0.25rem]">{media_title}</p>
         <p className="max-w-[750px]">
           {overview
-            ? overview.length < 250
+            ? overview.length < 350
               ? overview
-              : overview.substring(0, 250) + " ..."
+              : overview.substring(0, 350) + " ..."
             : ""}
+        </p> */}
+        <p className="font-bold text-4xl">Welcome.</p>
+        <p className="font-semibold text-2xl">
+          Millions of movies and TV shows. Explore now.
         </p>
       </div>
     </div>

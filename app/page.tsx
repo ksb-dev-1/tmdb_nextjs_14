@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 
 // components
-import Carousel from "@/components/Carousel/Carousel";
-import Trending from "@/components/Trending/Trending";
-import { CarouselSkeleton, MediaSkeleton } from "@/ui/skeletons";
+import Carousel from "./components/Carousel/Carousel";
+import Trending from "./components/Trending/Trending";
+import { CarouselSkeleton, MediaSkeleton } from "./ui/skeletons";
 
 export default function Home() {
   return (

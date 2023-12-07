@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 // components
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 //const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +24,7 @@ export default function RootLayout({
       //className={inter.className}
       >
         <Header />
-        <main className="mt-[20px] max-w-[1280px] w-[100%] mx-auto min-h-[calc(100vh-40px)]">
+        <main className="mb-[4rem] max-w-[1280px] w-[100%] mx-auto min-h-[calc(100vh-40px)]">
           {children}
         </main>
         <Footer />
