@@ -32,7 +32,7 @@ export default function Trending() {
 
   const switchTrending = () => {
     if (today) {
-      switchRef.current!.style.transform = "translateX(72px)";
+      switchRef.current!.style.transform = "translateX(92px)";
       setToday(false);
     } else {
       switchRef.current!.style.transform = "translateX(0px)";
@@ -42,16 +42,16 @@ export default function Trending() {
 
   return (
     <div className="max-w-[1100px] mx-auto">
-      <div className="mt-[2rem] flex items-center">
+      <div className="mt-[3rem] flex items-center">
         <p className="text-xl font-semibold">Trending</p>
         <div
-          className="relative w-[160.5px] ml-[1rem] flex items-center bg-[var(--c3)] text-white p-[0.25rem] rounded-[50px] cursor-pointer"
+          className="relative w-[200.5px] ml-[1rem] flex items-center bg-[var(--c3)] text-white p-[0.25rem] rounded-[50px] cursor-pointer"
           onClick={switchTrending}
         >
-          <span className="w-[80px] text-center font-[500]">Today</span>
-          <span className="w-[80px] text-center font-[500]">Weekly</span>
+          <span className="w-[100px] text-center font-[500]">Today</span>
+          <span className="w-[100px] text-center font-[500]">Weekly</span>
           <span
-            className="absolute bg-white text-black font-[500] rounded-[50px] w-[80px] text-center translate-x-[0px] transition"
+            className="absolute bg-gradient-to-r from-[var(--c1)] to-[var(--c2)] font-[500] rounded-[50px] w-[100px] text-center translate-x-[0px] transition"
             ref={switchRef}
           >
             {today ? "Today" : "Weekly"}
