@@ -1,0 +1,12 @@
+interface MediaCard {
+    title?: string;
+    name?: string;
+    release_date?: string;
+    first_air_date?: string;
+    vote_average: number;
+    backdrop_path: string;
+    poster_path: string;
+    genre_ids: number[];
+    id: number;
+  }
+  

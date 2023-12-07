@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-
 import Rating from "./Rating";
-
 import moment from "moment";
-
+import { IoMdAdd } from "react-icons/io";
 import style from "./MediaCard.module.css";
 
 const url =
@@ -55,6 +53,12 @@ export default function MediaCard({ media }: any) {
           </span>
         </div>
       </Link>
+
+      <div className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:scale-[1.25] transition ease transition-duration-300">
+        <span className="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 text-white text-[1.25rem]">
+          <IoMdAdd />
+        </span>
+      </div>
     </div>
   );
 }

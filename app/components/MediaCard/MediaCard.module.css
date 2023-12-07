@@ -1,6 +1,5 @@
 .card_container {
   position: relative;
-  overflow: hidden;
   transition: filter 0.3s ease;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   letter-spacing: 0px;
@@ -22,7 +21,7 @@
 /* .image {
   object-fit: contain;
 } */
-.card_container:hover .image {
+.card_link:hover .image {
   transform: scale(1.25);
   transition: 0.3s ease;
   border-top-left-radius: var(--border-radius-1);
@@ -56,9 +55,10 @@
 }
 .title {
   font-weight: 700;
+  margin-bottom: 0.25rem;
 }
 .date {
   font-size: 0.85rem;
-  color: #777;
-  font-weight: 400;
+  color: #555;
+  font-weight: 500;
 }

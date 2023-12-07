@@ -38,18 +38,10 @@ export default async function Carousel() {
         className={`${style.cover} absolute top-0 left-0 h-[350px] w-[100%] p-8`}
       ></div>
 
-      <div className="absolute left-[2rem] top-[6rem] text-white">
-        {/* <p className="font-bold text-2xl mb-[0.25rem]">{media_title}</p>
-        <p className="max-w-[750px]">
-          {overview
-            ? overview.length < 350
-              ? overview
-              : overview.substring(0, 350) + " ..."
-            : ""}
-        </p> */}
-        <p className="font-bold text-4xl">Welcome.</p>
+      <div className="absolute left-[2rem] bottom-[2rem] text-white">
+        <p className="font-bold text-4xl mb-[0.5rem]">Welcome.</p>
         <p className="font-semibold text-2xl">
-          Millions of movies and TV shows. Explore now.
+          Millions of movies and TV shows to discover. Explore now.
         </p>
       </div>
     </div>

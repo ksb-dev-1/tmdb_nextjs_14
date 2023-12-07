@@ -11,9 +11,10 @@ export default function Home() {
       <Suspense fallback={<CarouselSkeleton />}>
         <Carousel />
       </Suspense>
-      <Suspense fallback={<MediaSkeleton />}>
+      {/* <Suspense fallback={<MediaSkeleton />}>
         <Trending />
-      </Suspense>
+      </Suspense> */}
+      <Trending />
     </div>
   );
 }
