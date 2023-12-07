@@ -10,8 +10,8 @@ export default function Rating({ vote_average }: any) {
     return vote_average < 5
       ? "tomato"
       : vote_average >= 7.5
-      ? "#4fcc4f"
-      : "goldenrod";
+      ? "#0FFF50"
+      : "gold";
   };
 
   return (

@@ -35,14 +35,25 @@ export default async function Carousel() {
       </div>
 
       <div
-        className={`${style.cover} absolute top-0 left-0 h-[350px] w-[100%] p-8`}
-      ></div>
+        className={`${style.cover} absolute top-0 left-0 h-[350px] w-[100%] px-8`}
+      >
+        <div className="mt-[6rem] text-white">
+          <p className="font-bold text-4xl mb-[0.5rem]">Welcome.</p>
+          <p className="font-semibold text-2xl">
+            Millions of movies and TV shows to discover. Explore now.
+          </p>
+        </div>
 
-      <div className="absolute left-[2rem] bottom-[2rem] text-white">
-        <p className="font-bold text-4xl mb-[0.5rem]">Welcome.</p>
-        <p className="font-semibold text-2xl">
-          Millions of movies and TV shows to discover. Explore now.
-        </p>
+        <div className="relative mt-[2rem] h-[45px] rounded-[50px] bg-white pl-[1rem] cursor-pointer">
+          <p className="absolute h-[45px] top-[21.5%] left-[1.25rem] bg-trasparent">
+            <span className="text-[#555]">Search for a movie, tv show...</span>
+          </p>
+          <p className="absolute h-[45px] w-[100px] top-0 right-0 bg-gradient-to-r from-[var(--c1)] to-[var(--c2)] text-white rounded-[50px]">
+            <span className="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 font-[500]">
+              Search
+            </span>
+          </p>
+        </div>
       </div>
     </div>
   );
