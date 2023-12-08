@@ -43,7 +43,7 @@ export default function Trending() {
   return (
     <div className="max-w-[1100px] mx-auto">
       <div className="mt-[3rem] flex items-center">
-        <p className="text-xl font-semibold">Trending</p>
+        <p className="text-xl font-bold">Trending</p>
         <div
           className="relative w-[200.5px] ml-[1rem] flex items-center bg-[var(--c3)] text-white p-[0.35rem] rounded-[50px] cursor-pointer"
           onClick={switchTrending}

@@ -12,31 +12,26 @@ const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 
 export default async function Carousel() {
   const trending = await getTrending("week");
-  const { name, title, backdrop_path, overview } = await trending.results[
+  const { name, title, backdrop_path } = await trending.results[
     Math.floor(Math.random() * (19 - 0 + 1)) + 0
   ];
 
   const media_title = name ? name : title;
-  //await new Promise((resolve) => setTimeout(resolve, 10000));
 
   return (
     <div className="relative h-[350px]">
-      <div className="bg-red-300">
+      <div className="relative h-[350px] bg-red-300">
         <Image
           src={backdrop_path === null ? url : IMG_PATH + backdrop_path}
           blurDataURL={backdrop_path === null ? url : IMG_PATH + backdrop_path}
           placeholder="blur"
           alt={media_title}
-          height={350}
-          width={1280}
-          //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          fill
           className="h-[350px] w-[100%] object-cover"
         />
       </div>
 
-      <div
-        className={`${style.cover} absolute top-0 left-0 h-[350px] w-[100%] px-8`}
-      >
+      <div className="bg-gradient-to-t from-[var(--g2)] to-[var(--g1)] absolute top-0 left-0 h-[350px] w-[100%] px-8">
         <div className="mt-[6rem] text-white">
           <p className="font-bold text-4xl mb-[0.5rem]">Welcome.</p>
           <p className="font-semibold text-2xl">
