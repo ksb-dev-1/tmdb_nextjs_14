@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 // components
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
+import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 //const inter = Inter({ subsets: ["latin"] });
 

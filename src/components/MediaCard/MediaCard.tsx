@@ -19,7 +19,7 @@ export default function MediaCard({ media }: any) {
   } = media;
 
   return (
-    <div className="relative shadow-[0_2px_4px_rgba(0,0,0,0.2)] rounded-[var(--border-radius-1)]">
+    <div className="relative min-h-[300px] shadow-[0_2px_4px_rgba(0,0,0,0.2)] rounded-[var(--border-radius-1)]">
       <Link
         href="#"
         className="group block h-full no-underline rounded-[var(--border-radius-1)]"

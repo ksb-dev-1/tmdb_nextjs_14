@@ -3,11 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 
 // lib
-import { getTrending } from "@/app/lib/getTrending";
+import { getTrending } from "@/src/lib/getTrending";
 
 // components
 import MediaCard from "../MediaCard/MediaCard";
-import { MediaSkeleton } from "@/app/ui/skeletons";
+import { MediaSkeleton } from "@/src/ui/skeletons";
 
 export default function Trending() {
   const [today, setToday] = useState<boolean>(true);
@@ -63,8 +63,8 @@ export default function Trending() {
 
       {!loading && !error && (
         <div className="mt-[2rem] grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] items-stretch gap-[4rem_2rem]">
-          {trending.map((media: any, index: number) => (
-            <MediaCard media={media} key={index} />
+          {trending.map((media: MediaCard) => (
+            <MediaCard media={media} key={media.id} />
           ))}
         </div>
       )}

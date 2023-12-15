@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { useHandleHeaderScroll } from "@/app/hooks/useHandleHeaderScroll";
+import { useHandleHeaderScroll } from "@/src/hooks/useHandleHeaderScroll";
 import { FaSearch } from "react-icons/fa";
 import style from "./Header.module.css";
 
