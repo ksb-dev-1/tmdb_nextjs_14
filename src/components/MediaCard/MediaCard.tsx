@@ -19,12 +19,12 @@ export default function MediaCard({ media }: any) {
   } = media;
 
   return (
-    <div className="relative min-h-[300px] shadow-[0_2px_4px_rgba(0,0,0,0.2)] rounded-[var(--border-radius-1)]">
+    <div className="relative min-h-[200px] sm:min-h-[250px] shadow-[0_2px_4px_rgba(0,0,0,0.2)] rounded-[var(--border-radius-1)]">
       <Link
         href="#"
         className="group block h-full no-underline rounded-[var(--border-radius-1)]"
       >
-        <div className="relative overflow-hidden h-[250px] rounded-tl-[var(--border-radius-1)] rounded-tr-[var(--border-radius-1)]">
+        <div className="relative overflow-hidden h-[175px] sm:h-[225px] rounded-tl-[var(--border-radius-1)] rounded-tr-[var(--border-radius-1)]">
           <Image
             src={poster_path === null ? url : IMG_PATH + poster_path}
             blurDataURL={poster_path === null ? url : IMG_PATH + poster_path}
@@ -36,10 +36,10 @@ export default function MediaCard({ media }: any) {
           />
         </div>
 
-        <div className="relative flex flex-col pt-6 pb-4 px-4">
+        <div className="relative flex flex-col pt-6 pb-2 sm:pb-4 px-2 sm:px-4">
           <Rating vote_average={vote_average} />
 
-          <span className="font-bold mb-1">
+          <span className="font-semibold sm:font-bold text-[0.85rem] sm:text-[1rem] mb-1">
             {title
               ? title.length < 25
                 ? title
@@ -49,7 +49,7 @@ export default function MediaCard({ media }: any) {
               : name!.substring(0, 25) + " ..."}
           </span>
 
-          <span className="text-[0.85rem] text-[#555] font-medium">
+          <span className="text-[0.75rem] sm:text-[0.85rem] text-[#555] sm:font-medium">
             {release_date && moment(release_date).format("Do MMM, YYYY")}
             {first_air_date && moment(first_air_date).format("Do MMM, YYYY")}
           </span>

@@ -1,15 +1,15 @@
 import { Suspense } from "react";
 
 // components
-import Carousel from "../components/Carousel/Carousel";
+import Welcome from "../components/Welcome/Welcome";
 import Trending from "../components/Trending/Trending";
-import { CarouselSkeleton } from "../ui/skeletons";
+import { WelcomeSkeleton } from "../ui/skeletons";
 
 export default function Home() {
   return (
     <div className="max-w-[1280px] mx-auto">
-      <Suspense fallback={<CarouselSkeleton />}>
-        <Carousel />
+      <Suspense fallback={<WelcomeSkeleton />}>
+        <Welcome />
       </Suspense>
       <Trending />
     </div>

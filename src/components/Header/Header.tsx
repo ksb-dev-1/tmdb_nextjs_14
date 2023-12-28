@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed max-w-[100vw] z-[2] text-white h-16 flex items-center justify-center translate-y-[0%] transition-transform duration-[0.5s] ease-[ease] p-0 top-0 inset-x-0 bg-[var(--c3)]"
+      className="fixed max-w-[100vw] z-[2] text-white h-16 hidden sm:flex items-center justify-center translate-y-[0%] transition-transform duration-[0.5s] ease-[ease] p-0 top-0 inset-x-0 bg-[var(--c3)]"
     >
       <div
         ref={headerInnerRef}
