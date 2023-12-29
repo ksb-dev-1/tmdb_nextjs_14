@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-//import { Poppins } from "next/font/google";
 import "./globals.css";
+import Providers from "./providers";
 
 // components
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-
-// const roboto = Poppins({
-//   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "TMDB | Home",
@@ -23,14 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-      //className={roboto.className}
-      >
-        <Header />
-        <main className="mb-[4rem] max-w-[1280px] w-[100%] mx-auto min-h-[calc(100vh-40px)]">
-          {children}
-        </main>
-        <Footer />
+      <body>
+        <Providers>
+          <Header />
+          <main className="mb-[4rem] max-w-[1280px] w-[100%] mx-auto min-h-[calc(100vh-40px)]">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

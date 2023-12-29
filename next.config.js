@@ -3,14 +3,14 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: "image.tmdb.org", 
+        protocol: "https",
+        hostname: "image.tmdb.org",
       },
       {
-        protocol: 'https',
-        hostname: "upload.wikimedia.org", 
-      }
-    ]
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+      },
+    ],
   },
 };
 

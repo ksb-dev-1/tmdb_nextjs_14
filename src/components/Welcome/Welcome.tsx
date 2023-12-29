@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 // lib
-import { getTrending } from "@/src/lib/getTrending";
+import { getTrending } from "@/lib/getTrending";
 
 const url =
   "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";

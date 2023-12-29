@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import { useHandleHeaderScroll } from "@/src/hooks/useHandleHeaderScroll";
+import { useHandleHeaderScroll } from "@/hooks/useHandleHeaderScroll";
+import HeaderAuth from "./HeaderAuth";
 import { FaSearch } from "react-icons/fa";
 import style from "./Header.module.css";
 
@@ -33,9 +34,7 @@ export default function Header() {
         </div>
 
         <div className="flex items-center">
-          <Link href="#" className="font-[500] mr-[2rem]">
-            Login
-          </Link>
+          <HeaderAuth />
           <Link href="#" className="text-[var(--c2)] text-[1.25rem]">
             <FaSearch />
           </Link>
