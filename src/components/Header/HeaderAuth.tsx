@@ -23,7 +23,7 @@ export default function HeaderAuth() {
     );
   } else {
     authContent = (
-      <form action={actions.githubSignIn}>
+      <form action={actions.googleSignIn}>
         <button type="submit" className="font-[500] mr-[2rem]">
           Login
         </button>

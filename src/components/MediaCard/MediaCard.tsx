@@ -39,7 +39,7 @@ export default function MediaCard({ media }: any) {
         <div className="relative flex flex-col pt-6 pb-2 sm:pb-4 px-2 sm:px-4">
           <Rating vote_average={vote_average} />
 
-          <span className="font-semibold sm:font-bold text-[0.85rem] sm:text-[1rem] mb-1">
+          <span className="font-semibold sm:font-bold text-[0.85rem] sm:text-[1rem] mb-1 rounded min-h-[20px]">
             {title
               ? title.length < 25
                 ? title
@@ -49,7 +49,7 @@ export default function MediaCard({ media }: any) {
               : name!.substring(0, 25) + " ..."}
           </span>
 
-          <span className="text-[0.75rem] sm:text-[0.85rem] text-[#555] sm:font-medium">
+          <span className="text-[0.75rem] sm:text-[0.85rem] text-[#555] sm:font-medium rounded min-h-[20px]">
             {release_date && moment(release_date).format("Do MMM, YYYY")}
             {first_air_date && moment(first_air_date).format("Do MMM, YYYY")}
           </span>
