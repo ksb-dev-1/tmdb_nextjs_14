@@ -44,7 +44,7 @@ export default function HeaderAuth() {
           />
           <div
             ref={profileModalRef}
-            className="scale-0 transition absolute w-max right-0 bg-white text-black rounded p-2"
+            className="scale-0 transition absolute w-max right-0 bg-white text-black rounded px-4 py-2"
           >
             <form action={actions.signOut} onClick={hideProfileModal}>
               <button type="submit" className="font-[500]">

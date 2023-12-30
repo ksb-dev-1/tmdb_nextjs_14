@@ -6,14 +6,12 @@ import { BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { redirect } from "next/navigation";
 import { useEffect } from "react";
-import { revalidatePath } from "next/cache";
 
 export default function LoginButtons() {
   const { data: session } = useSession();
 
   useEffect(() => {
     if (session) {
-      revalidatePath("/");
       redirect("/");
     }
   }, [session]);
