@@ -20,7 +20,7 @@ export default function WatchlistBtn({ id, mediaType }: Props) {
     session && getWatchlist().then((res) => setwatchlist(res));
   }, [session]);
 
-  const handleClick = async () => {
+  const handleAdd = async () => {
     setLoading(true);
     const res = await actions.addWatchlist(id, mediaType);
     if (res.success) {
@@ -28,6 +28,21 @@ export default function WatchlistBtn({ id, mediaType }: Props) {
         setLoading(false);
         setwatchlist(res);
       });
+    } else {
+      console.log(res);
+    }
+  };
+
+  const handleDelete = async () => {
+    setLoading(true);
+    const res = await actions.deleteWatchlist(id, mediaType);
+    if (res.success) {
+      getWatchlist().then((res) => {
+        setLoading(false);
+        setwatchlist(res);
+      });
+    } else {
+      console.log(res);
     }
   };
 
@@ -55,7 +70,7 @@ export default function WatchlistBtn({ id, mediaType }: Props) {
       {/* ADD-BUTTON */}
       {session.data?.user && watchlist.length === 0 && (
         <button
-          onClick={handleClick}
+          onClick={handleAdd}
           type="submit"
           className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:scale-[1.25] transition ease transition-duration-300"
         >
@@ -71,7 +86,7 @@ export default function WatchlistBtn({ id, mediaType }: Props) {
         watchlist.every((item: any) => item.cardId !== String(id)) && (
           <button
             key={id}
-            onClick={handleClick}
+            onClick={handleAdd}
             type="submit"
             className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:scale-[1.25] transition ease transition-duration-300"
           >
@@ -90,7 +105,7 @@ export default function WatchlistBtn({ id, mediaType }: Props) {
             return (
               <button
                 key={id}
-                onClick={handleClick}
+                onClick={handleDelete}
                 type="submit"
                 className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:scale-[1.25] transition ease transition-duration-300"
               >
