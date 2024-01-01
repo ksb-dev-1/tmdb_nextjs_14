@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Rating from "./Rating";
 import moment from "moment";
-import { IoMdAdd } from "react-icons/io";
+import WatchlistBtn from "./WatchlistBtn";
 
 const url =
   "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
@@ -10,6 +10,8 @@ const IMG_PATH = "https://image.tmdb.org/t/p/w342";
 
 export default function MediaCard({ media }: any) {
   const {
+    id,
+    media_type,
     name,
     title,
     poster_path,
@@ -55,12 +57,7 @@ export default function MediaCard({ media }: any) {
           </span>
         </div>
       </Link>
-
-      <div className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:scale-[1.25] transition ease transition-duration-300">
-        <span className="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 text-white text-[1.25rem]">
-          <IoMdAdd />
-        </span>
-      </div>
+      <WatchlistBtn id={id} mediaType={media_type} />
     </div>
   );
 }

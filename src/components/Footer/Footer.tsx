@@ -27,7 +27,7 @@ export default function Footer() {
         </Link>
         <div className="mb-8">
           <div className="flex flex-col sm:items-center">
-            <p className="text-2xl font-semibold">Tech Stack </p>
+            <p className="text-2xl font-semibold">Tech Stack</p>
             <div className="flex items-start mt-4">
               <Link
                 href="https://nextjs.org/"

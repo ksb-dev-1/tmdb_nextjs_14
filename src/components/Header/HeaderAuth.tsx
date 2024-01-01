@@ -36,7 +36,6 @@ export default function HeaderAuth() {
           <Image
             src={session.data.user.image || ""}
             blurDataURL={session.data.user.image || ""}
-            placeholder="blur"
             alt="profile"
             height={30}
             width={30}

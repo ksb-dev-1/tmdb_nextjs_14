@@ -20,11 +20,11 @@ model User {
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
-  accounts Account[]
-  sessions Session[]
-  wishlist Wishlist[]
-  movies   Movie[]
-  shows    TvShow[]
+  accounts  Account[]
+  sessions  Session[]
+  watchlist Watchlist[]
+  // movies    Movie[]
+  // shows     TvShow[]
 }
 
 model Account {
@@ -67,7 +67,7 @@ model VerificationToken {
   @@map("verification_tokens")
 }
 
-model Wishlist {
+model Watchlist {
   id        String @id @default(auto()) @map("_id") @db.ObjectId
   cardId    String
   mediaType String
@@ -75,18 +75,18 @@ model Wishlist {
   userId    String @db.ObjectId
 }
 
-model Movie {
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
-  cardId    String
-  mediaType String
-  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId    String @db.ObjectId
-}
+// model Movie {
+//   id        String @id @default(auto()) @map("_id") @db.ObjectId
+//   cardId    String
+//   mediaType String
+//   user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+//   userId    String @db.ObjectId
+// }
 
-model TvShow {
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
-  cardId    String
-  mediaType String
-  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId    String @db.ObjectId
-}
+// model TvShow {
+//   id        String @id @default(auto()) @map("_id") @db.ObjectId
+//   cardId    String
+//   mediaType String
+//   user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+//   userId    String @db.ObjectId
+// }

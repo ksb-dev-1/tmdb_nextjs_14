@@ -3,7 +3,7 @@ import { Suspense } from "react";
 // components
 import Welcome from "../components/Welcome/Welcome";
 import Trending from "../components/Trending/Trending";
-import { WelcomeSkeleton } from "../ui/skeletons";
+import { WelcomeSkeleton, MediaSkeleton } from "../ui/skeletons";
 
 export default function Home() {
   return (
@@ -11,7 +11,10 @@ export default function Home() {
       <Suspense fallback={<WelcomeSkeleton />}>
         <Welcome />
       </Suspense>
-      <Trending />
+      <Suspense fallback={<MediaSkeleton />}>
+        <Trending />
+      </Suspense>
+      {/* <Trending /> */}
     </div>
   );
 }
