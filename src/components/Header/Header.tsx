@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useHandleHeaderScroll } from "@/hooks/useHandleHeaderScroll";
 import HeaderAuth from "./HeaderAuth";
 import { FaSearch } from "react-icons/fa";
-import style from "./Header.module.css";
 
 export default function Header() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -24,7 +23,7 @@ export default function Header() {
         <div className="flex items-center">
           <Link
             href="/"
-            className={`${style.title} text-[1.75rem] font-bold flex items-center no-underline rounded-[var(--border-radius-1)] tracking-[1px] mr-8`}
+            className="gradient text-[1.75rem] font-bold flex items-center no-underline rounded-[var(--border-radius-1)] tracking-[1px] mr-8"
           >
             TMDB
             <span className="inline-block w-[55px] h-5 ml-2 mt-1 rounded-[50px] bg-[var(--c2)]"></span>

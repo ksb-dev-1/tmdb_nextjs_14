@@ -25,6 +25,13 @@ body {
   min-height: 100vh;
 }
 
+.gradient {
+  background: linear-gradient(to right, #90cea1, #01b4e4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .tomato {
   color: tomato;
 }
