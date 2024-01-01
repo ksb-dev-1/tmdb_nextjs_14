@@ -26,71 +26,71 @@ export default function Footer() {
           </div>
         </Link>
         <div className="mb-8">
-          <div>
-            <p className="text-2xl font-bold">Tech Stack </p>
-            <div className="flex flex-col items-start mt-4">
+          <div className="flex flex-col sm:items-center">
+            <p className="text-2xl font-semibold">Tech Stack </p>
+            <div className="flex items-start mt-4">
               <Link
                 href="https://nextjs.org/"
                 className="flex items-center mb-2"
                 //passHref={true}
                 target="_blank"
               >
-                <span className="bg-white text-black rounded-full mr-2 p-1">
+                <span className="bg-white text-black rounded-full mr-2 p-1 text-2xl">
                   <SiNextdotjs />
                 </span>
-                Next.js
+                {/* Next.js */}
               </Link>
               <Link
                 href="https://www.typescriptlang.org/"
                 className="flex items-center mb-2"
                 target="_blank"
               >
-                <span className="bg-white text-[#3178c6] rounded-[50%] mr-2 p-1">
+                <span className="bg-white text-[#3178c6] rounded-[50%] mr-2 p-1 text-2xl">
                   <SiTypescript />
                 </span>
-                Typescript
+                {/* Typescript */}
               </Link>
               <Link
                 href="https://tailwindcss.com/"
                 className="flex items-center mb-2"
                 target="_blank"
               >
-                <span className="bg-white text-[#3178c6] rounded-[50%] mr-2 p-1">
+                <span className="bg-white text-[#3178c6] rounded-[50%] mr-2 p-1 text-2xl">
                   <SiTailwindcss />
                 </span>
-                Tailwind
+                {/* Tailwind */}
               </Link>
               <Link
                 href="https://www.prisma.io/"
                 className="flex items-center mb-2"
                 target="_blank"
               >
-                <span className="bg-white text-[#1a202c] rounded-[50%] mr-2 p-1">
+                <span className="bg-white text-[#1a202c] rounded-[50%] mr-2 p-1 text-2xl">
                   <SiPrisma />
                 </span>
-                Prisma
+                {/* Prisma */}
               </Link>
               <Link
                 href="/https://www.mongodb.com/"
                 className="flex items-center mb-2"
                 target="_blank"
               >
-                <span className="bg-white text-[#116149] rounded-[50%] mr-2 p-1">
+                <span className="bg-white text-[#116149] rounded-[50%] p-1 text-2xl">
                   <SiMongodb />
                 </span>
-                MongoDB
+                {/* MongoDB */}
               </Link>
             </div>
           </div>
         </div>
         <div>
-          <p className="text-2xl font-bold">Contact</p>
+          <p className="text-2xl font-semibold">Contact</p>
           <p>Name: Kedar Babaleshwar</p>
           <p>Email : babaleshwarkedar@gmail.com</p>
           <p>Mobile : +91-6361579289</p>
           <Link
             href="https://github.com/"
-            className="flex items-center text-xl mt-4 rounded-[50px] font-bold"
+            className="flex items-center text-xl mt-4 rounded-[50px] font-semibold"
             target="_blank"
           >
             GitHub Profile
