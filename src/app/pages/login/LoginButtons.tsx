@@ -21,9 +21,9 @@ export default function LoginButtons() {
       <form action={actions.githubSignIn}>
         <button
           type="submit"
-          className="font-[500] flex items-center w-max bg-black p-1 pr-[1rem] rounded mb-[0.5rem] hover:bg-[#333] transition"
+          className="relative font-[500] flex items-center justify-center w-[300px] bg-black rounded mb-[0.5rem] hover:bg-[#333] transition py-2 pl-2"
         >
-          <span className="text-black bg-white p-1 text-3xl rounded mr-[1rem]">
+          <span className="absolute left-[3.5px] text-black bg-white p-1 text-3xl rounded mr-[1rem]">
             <BsGithub />
           </span>
           <span className="text-lg">Login with GitHub</span>
@@ -32,9 +32,9 @@ export default function LoginButtons() {
       <form action={actions.googleSignIn}>
         <button
           type="submit"
-          className="font-[500] flex items-center w-max bg-[#4285F4] p-1 pr-[1rem] rounded hover:bg-[#5c9bff] transition"
+          className="relative font-[500] flex items-center justify-center w-[300px] bg-[#4285F4] p-1 pr-[1rem] rounded hover:bg-[#5c9bff] transition py-2 pl-2"
         >
-          <span className="bg-white p-1 text-3xl rounded mr-[1rem]">
+          <span className="absolute left-[3.5px] bg-white p-1 text-3xl rounded mr-[1rem]">
             <FcGoogle />
           </span>
           <span className="text-lg">Login with Google</span>
