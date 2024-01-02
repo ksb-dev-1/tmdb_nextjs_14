@@ -8,7 +8,7 @@ const url =
   "https://upload.wikimedia.org/wikipedia/commons/f/fc/No_picture_available.png";
 const IMG_PATH = "https://image.tmdb.org/t/p/w342";
 
-export default function MediaCard({ media }: any) {
+export default function MediaCard({ media }: { media: MediaCard }) {
   const {
     id,
     media_type,
@@ -31,7 +31,7 @@ export default function MediaCard({ media }: any) {
             src={poster_path === null ? url : IMG_PATH + poster_path}
             blurDataURL={poster_path === null ? url : IMG_PATH + poster_path}
             placeholder="blur"
-            alt={name ? name : title}
+            alt={name ? name! : title!}
             fill={true}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="group-hover:scale-125 transition duration-300"

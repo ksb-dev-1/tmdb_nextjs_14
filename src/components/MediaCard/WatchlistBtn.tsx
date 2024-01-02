@@ -1,18 +1,19 @@
 "use client";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-import { IoMdAdd, IoMdClose } from "react-icons/io";
+import { IoMdAdd } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import * as actions from "@/actions";
 import { useState, useEffect } from "react";
 import { getWatchlist } from "@/lib/getWatchlist";
 
-interface Props {
-  id: string;
+export default function WatchlistBtn({
+  id,
+  mediaType,
+}: {
+  id: number;
   mediaType: string;
-}
-
-export default function WatchlistBtn({ id, mediaType }: Props) {
+}) {
   const [watchlist, setwatchlist] = useState([]);
   const [loading, setLoading] = useState(false);
   const session = useSession();
@@ -136,34 +137,3 @@ export default function WatchlistBtn({ id, mediaType }: Props) {
     </>
   );
 }
-
-/*
- <button
-          onClick={handleClick}
-          type="submit"
-          className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:scale-[1.25] transition ease transition-duration-300"
-        >
-          <span className="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 text-white text-[1.25rem]">
-            <IoMdAdd />
-          </span>
-        </button>
-
-        ---------------------------
-  
-  <button className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:scale-[1.25] transition ease transition-duration-300">
-        <span className="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 text-white text-[1.25rem]">
-          ...
-        </span>
-      </button>
-
-      -----------------------------
-
-       <Link
-        href="/pages/login"
-        className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:scale-[1.25] transition ease transition-duration-300"
-      >
-        <span className="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 text-white text-[1.25rem]">
-          <IoMdAdd />
-        </span>
-      </Link>
-*/

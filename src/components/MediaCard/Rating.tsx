@@ -2,7 +2,7 @@
 
 import { Circle } from "rc-progress";
 
-export default function Rating({ vote_average }: any) {
+export default function Rating({ vote_average }: { vote_average: number }) {
   const getBg = (vote_average: any) => {
     return vote_average < 5
       ? "tomato"
