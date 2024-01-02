@@ -45,8 +45,8 @@ export default async function Trending() {
   // };
 
   return (
-    <div className="max-w-[1000px] mx-auto px-[1rem] lg:px-0">
-      <div className="mt-[2rem] sm:mt-[3rem] flex items-center">
+    <div className="max-w-[1000px] mx-auto px-4 lg:px-0">
+      <div className="mt-8 sm:mt-12 flex items-center">
         <p className="text-lg sm:text-xl font-bold">Trending</p>
         {/* <div
           className="relative w-[200.5px] ml-[1rem] hidden sm:flex items-center bg-[var(--c3)] text-white p-[0.35rem] rounded-[50px] cursor-pointer"
@@ -89,7 +89,7 @@ export default async function Trending() {
           ))}
         </div>
       )} */}
-      <div className="mt-[1rem] grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(150px,1fr))] items-stretch gap-[2rem_1rem] sm:gap-[4rem_2rem]">
+      <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(150px,1fr))] items-stretch gap-[2rem_1rem] sm:gap-[4rem_2rem]">
         {trending.results.map((media: MediaCard) => (
           <MediaCard media={media} key={media.id} />
         ))}

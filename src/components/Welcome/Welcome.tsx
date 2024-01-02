@@ -10,7 +10,7 @@ const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 export default async function Welcome() {
   const trending = await getTrending("week");
   //Math.floor(Math.random() * (19 - 0 + 1)) + 0
-  const { name, title, backdrop_path } = await trending.results[6];
+  const { name, title, backdrop_path } = await trending.results[7];
 
   const media_title = name ? name : title;
 
@@ -24,6 +24,7 @@ export default async function Welcome() {
           alt={media_title}
           fill
           className="w-[100%] object-cover"
+          priority
         />
       </div>
 
@@ -35,7 +36,7 @@ export default async function Welcome() {
           </p>
         </div>
 
-        <div className="relative mt-[1rem] sm:mt-[2rem] h-[35px] sm:h-[45px] rounded-[50px] bg-white pl-[1rem] cursor-pointer">
+        <div className="relative mt-4 sm:mt-8 h-[35px] sm:h-[45px] rounded-[50px] bg-white pl-[1rem] cursor-pointer">
           <p className="absolute h-[35px] sm:h-[45px] top-[12.5%] sm:top-[21.5%] left-[1.25rem] bg-trasparent">
             <span className="text-[#555] text-[0.85rem] sm:text-[1rem]">
               Search for a movie, tv show...
