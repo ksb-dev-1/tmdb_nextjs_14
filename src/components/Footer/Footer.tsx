@@ -9,9 +9,12 @@ import { SiMongodb } from "react-icons/si";
 export default function Footer() {
   return (
     <footer className="bg-[var(--c3)] text-white flex items-start justify-center w-full">
-      <div className="w-[1280px] max-w-[1280px] px-4 py-8 sm:p-8 flex flex-col sm:flex-row items-start sm:justify-between">
-        <Link href="/" className="mb-8">
-          <div className="flex items-center">
+      <div className="w-[1280px] max-w-[1280px] px-4 py-8 sm:p-8 flex flex-col lg:flex-row justify-between">
+        <Link
+          href="/"
+          className="mb-4 lg:mb-0 lg:w-[33%] w-[100%] bg-[#07192b] h-[100%]  flex flex-col items-center justify-center rounded p-8"
+        >
+          <div className="flex">
             <p className="gradient text-4xl font-bold">THE</p>
             <p className="w-[45px] h-7 ml-2 mt-1 rounded-[50px] bg-[var(--c2)]"></p>
           </div>
@@ -25,8 +28,9 @@ export default function Footer() {
             <p className="gradient text-4xl font-bold">DB</p>
           </div>
         </Link>
-        <div className="mb-8">
-          <div className="flex flex-col sm:items-center">
+
+        <div className="mb-4 lg:mb-0 lg:w-[33%] w-[100%] bg-[#07192b] h-[100%] flex flex-col items-center justify-center rounded p-8">
+          <div className="flex flex-col items-center">
             <p className="text-2xl font-semibold">Tech Stack</p>
             <div className="flex items-start mt-4">
               <Link
@@ -83,7 +87,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div>
+
+        <div className="lg:w-[33%] w-[100%] bg-[#07192b] h-[100%] flex flex-col items-center justify-center rounded p-8">
           <p className="text-2xl font-semibold">Contact</p>
           <p>Name: Kedar Babaleshwar</p>
           <p>Email : babaleshwarkedar@gmail.com</p>

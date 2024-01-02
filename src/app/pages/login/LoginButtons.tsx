@@ -17,11 +17,11 @@ export default function LoginButtons() {
   }, [session]);
 
   return (
-    <div className="text-white mt-[2rem]">
+    <div className="text-white mt-[2rem] flex flex-col items-center">
       <form action={actions.githubSignIn}>
         <button
           type="submit"
-          className="relative font-[500] flex items-center justify-center w-[300px] bg-black rounded mb-[0.5rem] hover:bg-[#333] transition py-2 pl-2"
+          className="relative font-[500] flex items-center justify-center w-[280px] sm:w-[300px] bg-black rounded mb-[0.5rem] hover:bg-[#333] transition py-2 pl-2"
         >
           <span className="absolute left-[3.5px] text-black bg-white p-1 text-3xl rounded mr-[1rem]">
             <BsGithub />
@@ -32,7 +32,7 @@ export default function LoginButtons() {
       <form action={actions.googleSignIn}>
         <button
           type="submit"
-          className="relative font-[500] flex items-center justify-center w-[300px] bg-[#4285F4] p-1 pr-[1rem] rounded hover:bg-[#5c9bff] transition py-2 pl-2"
+          className="relative font-[500] flex items-center justify-center w-[280px] sm:w-[300px] bg-[#4285F4] p-1 pr-[1rem] rounded hover:bg-[#5c9bff] transition py-2 pl-2"
         >
           <span className="absolute left-[3.5px] bg-white p-1 text-3xl rounded mr-[1rem]">
             <FcGoogle />

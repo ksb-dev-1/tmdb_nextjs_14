@@ -9,9 +9,8 @@ const IMG_PATH = "https://image.tmdb.org/t/p/w1280";
 
 export default async function Welcome() {
   const trending = await getTrending("week");
-  const { name, title, backdrop_path } = await trending.results[
-    Math.floor(Math.random() * (19 - 0 + 1)) + 0
-  ];
+  //Math.floor(Math.random() * (19 - 0 + 1)) + 0
+  const { name, title, backdrop_path } = await trending.results[6];
 
   const media_title = name ? name : title;
 

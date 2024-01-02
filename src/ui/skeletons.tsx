@@ -9,6 +9,20 @@ export function WelcomeSkeleton() {
   );
 }
 
+export function SwitchSkeleton() {
+  return (
+    <div className="mt-[2rem] sm:mt-[3rem] flex items-center">
+      <div className="skeleton relative w-[200.5px] hidden sm:flex items-center  text-white p-[0.35rem] rounded-[50px]">
+        <span className="w-[100px] text-center font-[500]">Today</span>
+        <span className="w-[100px] text-center font-[500]">Weekly</span>
+        <span className="absolute bg-white text-white text-[var(--c3)] font-[500] rounded-[50px] w-[100px] text-center translate-x-[-2px] transition p-[0.1rem]">
+          Trending
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export function MediaSkeleton() {
   return (
     <div className="mt-[2rem] sm:mt-[3rem] max-w-[1000px] mx-auto">
