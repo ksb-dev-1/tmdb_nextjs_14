@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="fixed max-w-[100vw] z-[2] text-white h-16 hidden sm:flex items-center justify-center translate-y-[0%] transition-transform duration-[0.5s] ease-[ease] p-0 top-0 inset-x-0 bg-[var(--c3)]"
+      className="fixed max-w-[100vw] z-[2] text-white h-16 hidden md:flex items-center justify-center translate-y-[0%] transition-transform duration-[0.5s] ease-[ease] p-0 top-0 inset-x-0 bg-[var(--c3)]"
     >
       <div
         ref={headerInnerRef}
@@ -23,7 +23,8 @@ export default function Header() {
         <div className="flex items-center">
           <Link
             href="/"
-            className="gradient text-[1.75rem] font-bold flex items-center no-underline rounded-[var(--border-radius-1)] tracking-[1px] mr-8"
+            aria-label="TMDB"
+            className="gradient text-[1.75rem] font-[900] flex items-center no-underline rounded-[var(--border-radius-1)] tracking-[1px] mr-8"
           >
             TMDB
             <span className="inline-block w-[55px] h-5 ml-2 mt-1 rounded-[50px] bg-[var(--c2)]"></span>
@@ -34,7 +35,11 @@ export default function Header() {
 
         <div className="flex items-center">
           <HeaderAuth />
-          <Link href="#" className="text-[var(--c2)] text-[1.25rem]">
+          <Link
+            href="#"
+            aria-label="search icon"
+            className="text-[var(--c2)] text-[1.25rem]"
+          >
             <FaSearch />
           </Link>
         </div>

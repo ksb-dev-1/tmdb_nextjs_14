@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="w-[1280px] max-w-[1280px] px-4 py-8 sm:p-8 flex flex-col lg:flex-row justify-between lg:h-[250px]">
         <Link
           href="/"
-          className="mb-4 lg:mb-0 lg:w-[33%] w-[100%] bg-[#07192b] h-[100%]  flex flex-col items-center justify-center rounded py-8"
+          className="mb-4 lg:mb-0 lg:w-[32%] w-[100%] bg-[#07192b] h-[100%]  flex flex-col items-center justify-center rounded py-8"
         >
           <div className="flex">
             <p className="gradient text-4xl font-bold">THE</p>
@@ -29,7 +29,7 @@ export default function Footer() {
           </div>
         </Link>
 
-        <div className="mb-4 lg:mb-0 lg:w-[33%] w-[100%] bg-[#07192b] h-[100%] flex flex-col items-center justify-center rounded py-8">
+        <div className="mb-4 lg:mb-0 lg:w-[32%] w-[100%] bg-[#07192b] h-[100%] flex flex-col items-center justify-center rounded py-8">
           <div className="flex flex-col items-center">
             <p className="text-2xl font-semibold">Tech Stack</p>
             <div className="flex items-start mt-4">
@@ -38,6 +38,7 @@ export default function Footer() {
                 className="flex items-center mb-2"
                 //passHref={true}
                 target="_blank"
+                aria-label="Next.js icon"
               >
                 <span className="bg-white text-black rounded-full mr-2 p-2 text-3xl">
                   <SiNextdotjs />
@@ -48,6 +49,7 @@ export default function Footer() {
                 href="https://www.typescriptlang.org/"
                 className="flex items-center mb-2"
                 target="_blank"
+                aria-label="Typescript icon"
               >
                 <span className="bg-white text-[#3178c6] rounded-[50%] mr-2 p-2 text-3xl">
                   <SiTypescript />
@@ -58,6 +60,7 @@ export default function Footer() {
                 href="https://tailwindcss.com/"
                 className="flex items-center mb-2"
                 target="_blank"
+                aria-label="Tailwind icon"
               >
                 <span className="bg-white text-[#3178c6] rounded-[50%] mr-2 p-2 text-3xl">
                   <SiTailwindcss />
@@ -68,6 +71,7 @@ export default function Footer() {
                 href="https://www.prisma.io/"
                 className="flex items-center mb-2"
                 target="_blank"
+                aria-label="Prisma icon"
               >
                 <span className="bg-white text-[#1a202c] rounded-[50%] mr-2 p-2 text-3xl">
                   <SiPrisma />
@@ -78,6 +82,7 @@ export default function Footer() {
                 href="/https://www.mongodb.com/"
                 className="flex items-center mb-2"
                 target="_blank"
+                aria-label="MongoDB icon"
               >
                 <span className="bg-white text-[#116149] rounded-[50%] p-2 text-3xl">
                   <SiMongodb />
@@ -88,7 +93,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="lg:w-[33%] w-[100%] bg-[#07192b] h-[100%] flex flex-col items-center justify-center rounded py-8">
+        <div className="lg:w-[32%] w-[100%] bg-[#07192b] h-[100%] flex flex-col items-center justify-center rounded py-8">
           <p className="text-2xl font-semibold">Contact</p>
           <p>Name: Kedar Babaleshwar</p>
           <p>Email : babaleshwarkedar@gmail.com</p>

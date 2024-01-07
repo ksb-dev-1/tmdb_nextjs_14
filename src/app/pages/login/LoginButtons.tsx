@@ -17,7 +17,7 @@ export default function LoginButtons() {
   }, [session]);
 
   return (
-    <div className="text-white mt-[2rem] flex flex-col items-center">
+    <div className="text-white mt-[2rem] flex flex-col">
       <form action={actions.githubSignIn}>
         <button
           type="submit"

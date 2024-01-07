@@ -3,9 +3,9 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { IoMdAdd } from "react-icons/io";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { useState, useEffect, useMemo } from "react";
+import { fetchWatchlist } from "@/lib/fetchWatchlist";
 import * as actions from "@/actions";
-import { useState, useEffect } from "react";
-import { getWatchlist } from "@/lib/getWatchlist";
 
 export default function WatchlistBtn({
   id,
@@ -18,15 +18,22 @@ export default function WatchlistBtn({
   const [loading, setLoading] = useState(false);
   const session = useSession();
 
+  const memoizeWatchlist = useMemo(
+    () => async () => {
+      session.data?.user && fetchWatchlist().then((res) => setwatchlist(res));
+    },
+    [session]
+  );
+
   useEffect(() => {
-    session && getWatchlist().then((res) => setwatchlist(res));
-  }, [session]);
+    memoizeWatchlist();
+  }, [memoizeWatchlist]);
 
   const handleAdd = async () => {
     setLoading(true);
     const res = await actions.addWatchlist(id, mediaType);
     if (res.success) {
-      getWatchlist().then((res) => {
+      fetchWatchlist().then((res) => {
         setLoading(false);
         setwatchlist(res);
       });
@@ -39,7 +46,7 @@ export default function WatchlistBtn({
     setLoading(true);
     const res = await actions.deleteWatchlist(id, mediaType);
     if (res.success) {
-      getWatchlist().then((res) => {
+      fetchWatchlist().then((res) => {
         setLoading(false);
         setwatchlist(res);
       });
@@ -62,6 +69,7 @@ export default function WatchlistBtn({
         <Link
           href="/pages/login"
           className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:bg-[#000] transition ease"
+          aria-label="add to watchlist icon"
         >
           <span className="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-2/4 text-white text-[1.25rem]">
             <IoMdAdd />

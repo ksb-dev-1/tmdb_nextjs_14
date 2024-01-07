@@ -25,7 +25,7 @@ export default function HeaderAuth() {
   } else if (session.data?.user) {
     authContent = (
       <div className="flex items-center">
-        <Link href="#" className="font-medium mr-8">
+        <Link href="#" aria-label="Watchlist" className="font-medium mr-8">
           Watchlist
         </Link>
         <div
@@ -56,7 +56,7 @@ export default function HeaderAuth() {
     );
   } else {
     authContent = (
-      <Link href="/pages/login" className="font-medium mr-8">
+      <Link href="/pages/login" aria-label="Login" className="font-medium mr-8">
         Login
       </Link>
     );
