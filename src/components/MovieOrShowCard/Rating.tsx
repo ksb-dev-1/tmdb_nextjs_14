@@ -1,8 +1,15 @@
 "use client";
 
+//import { useState, useEffect } from "react";
 import { Circle } from "rc-progress";
 
 export default function Rating({ vote_average }: { vote_average: number }) {
+  // const [rating, setRating] = useState(0)
+
+  // useEffect(() => {
+
+  // }, [])
+
   const getBg = (vote_average: any) => {
     return vote_average < 5
       ? "tomato"

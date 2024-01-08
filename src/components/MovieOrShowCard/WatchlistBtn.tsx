@@ -8,11 +8,11 @@ import { fetchWatchlist } from "@/lib/fetchWatchlist";
 import * as actions from "@/actions";
 
 export default function WatchlistBtn({
-  id,
-  mediaType,
+  data,
+  type,
 }: {
-  id: number;
-  mediaType: string;
+  data: MovieOrShowCard;
+  type?: string;
 }) {
   const [watchlist, setwatchlist] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -31,7 +31,7 @@ export default function WatchlistBtn({
 
   const handleAdd = async () => {
     setLoading(true);
-    const res = await actions.addWatchlist(id, mediaType);
+    const res = await actions.addWatchlist(data);
     if (res.success) {
       fetchWatchlist().then((res) => {
         setLoading(false);
@@ -44,7 +44,10 @@ export default function WatchlistBtn({
 
   const handleDelete = async () => {
     setLoading(true);
-    const res = await actions.deleteWatchlist(id, mediaType);
+    const res = await actions.deleteWatchlist(
+      type === "watchlist" ? data.card_id! : data.id!,
+      data.media_type
+    );
     if (res.success) {
       fetchWatchlist().then((res) => {
         setLoading(false);
@@ -100,9 +103,12 @@ export default function WatchlistBtn({
       {session.status !== "loading" &&
         session.data?.user &&
         watchlist.length > 0 &&
-        watchlist.every((item: any) => item.cardId !== String(id)) && (
+        watchlist.every(
+          (item: any) =>
+            item.card_id !== (type === "watchlist" ? data.card_id : data.id)
+        ) && (
           <button
-            key={id}
+            key={type === "watchlist" ? data.card_id : data.id}
             onClick={handleAdd}
             type="submit"
             className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:bg-[#000] transition ease"
@@ -122,11 +128,13 @@ export default function WatchlistBtn({
         session.data?.user &&
         watchlist &&
         watchlist.length > 0 &&
-        watchlist.map((item: any, index) => {
-          if (item.cardId === String(id)) {
+        watchlist.map((item: any) => {
+          if (
+            item.card_id === (type === "watchlist" ? data.card_id : data.id)
+          ) {
             return (
               <button
-                key={id}
+                key={type === "watchlist" ? data.card_id : data.id}
                 onClick={handleDelete}
                 type="submit"
                 className="absolute bg-[rgba(0,0,0,0.75)] top-0 right-0 w-[35px] h-[35px] cursor-pointer rounded-[3px] hover:bg-[#000] transition ease"

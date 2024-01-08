@@ -4,9 +4,8 @@ interface MovieOrShowCard {
   media_type: string;
   release_date?: string;
   first_air_date?: string;
-  vote_average: number;
-  backdrop_path: string;
-  poster_path: string;
-  genre_ids: number[];
-  id: number;
+  vote_average?: number;
+  poster_path?: string;
+  id?: number;
+  card_id?: number;
 }

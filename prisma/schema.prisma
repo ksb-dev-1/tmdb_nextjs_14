@@ -68,11 +68,14 @@ model VerificationToken {
 }
 
 model Watchlist {
-  id        String @id @default(auto()) @map("_id") @db.ObjectId
-  cardId    String
-  mediaType String
-  user      User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  userId    String @db.ObjectId
+  id           String @id @default(auto()) @map("_id") @db.ObjectId
+  card_id      Int
+  media_type   String
+  poster_path  String
+  title        String
+  release_date String
+  user         User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId       String @db.ObjectId
 }
 
 // model Movie {
